@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Sri Annapoorna | Veg Menu</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Google font for vegetarian fresh look */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #eaf4e7;
+      color: #1b3d1b;
+      margin: 0;
+      padding-top: 80px;
+    }
+
+    /* Navigation Bar Styles */
+    nav {
+      background-color: #2f6627;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .navbar-brand {
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 2px;
+      font-size: 1.5rem;
+    }
+
+    nav .nav-link {
+      color: #c2d6b5;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav .nav-link:hover,
+    nav .nav-link.active {
+      color: #f7b733;
+      transform: scale(1.1);
+      text-shadow: 0 0 8px #f7b733;
+    }
+
+    /* Menu Card Container */
+    .menu-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Menu Header */
+    .menu-header {
+      background-color: #2f6627;
+      color: #f7b733;
+      padding: 20px;
+      text-align: center;
+      border-radius: 0.5rem 0.5rem 0 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 1.5px;
+      box-shadow: 0px 4px 8px #a1c181;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    /* Menu Card */
+    .menu-card {
+      background: white;
+      border-radius: 0 0 0.5rem 0.5rem;
+      box-shadow: 0 8px 20px rgb(107 145 90 / 0.4);
+      padding: 30px 40px;
+      animation: fadeInUp 1s ease forwards;
+      margin-bottom: 50px;
+    }
+
+    /* Menu Section Titles */
+    .section-title {
+      color: #964b00;
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Emoji icons in section title */
+    .section-title span {
+      font-size: 1.5rem;
+    }
+
+    /* Menu Items */
+    .menu-list {
+      padding-left: 0;
+      list-style: none;
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+
+    .menu-list li {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      break-inside: avoid;
+      cursor: default;
+      transition: color 0.3s ease;
+    }
+
+    .menu-list li:hover {
+      color: #f7b733;
+      font-weight: 700;
+      text-shadow: 0 0 4px #f7b733;
+    }
+
+    /* Responsive Columns for smaller screens */
+    @media (max-width: 767px) {
+      .menu-list {
+        column-count: 1;
+      }
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #2f6627;
+      color: #f7b733;
+      text-align: center;
+      padding: 12px 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-shadow: 0 -2px 10px #a1c181;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <a class="navbar-brand" href="#">Sri Annapoorna Veg Hotel</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon" style="color: white;"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home-section">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-section">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-section">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#address-section">Address</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="menu-container">
+    <!-- Home Section -->
+    <section id="home-section" class="mb-5">
+      <div class="text-center mb-4">
+        <h1 class="menu-header">Hotel Sri Annapoorna | Veg | Salem</h1>
+        <p class="lead text-success fst-italic mt-2">
+          Celebrating 55 Years of Service | Since 1970
+        </p>
+        <p>@ Fairlands & Ramakrishna Road, Salem</p>
+      </div>
+    </section>
+
+    <!-- Menu Cards -->
+    <section id="menu-section">
+      <!-- Chinese Rice & Noodles + South Indian -->
+      <div class="menu-card mb-5" data-animate>
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="section-title">
+              <span>🍜</span> CHINESE RICE & NOODLES
+            </h3>
+            <ul class="menu-list">
+              <li>Schezwan Mushroom Fried Rice</li>
+              <li>Schezwan Paneer Fried Rice</li>
+              <li>Shanghai Fried Rice</li>
+              <li>Babaycorn Noodles</li>
+              <li>Chettinad Noodles</li>
+              <li>Mixed Veg Noodles</li>
+              <li>Schezwan Mushroom Noodles</li>
+              <li>Schezwan Paneer Noodles</li>
+              <li>Chappathi Manchurian</li>
+              <li>Veg Ball Manchurian</li>
+              <li>Japan Baby Corn</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3 class="section-title">
+              <span>🥒</span> SOUTH INDIAN
+            </h3>
+            <ul class="menu-list">
+              <li>Rava Dosa</li>
+              <li>Plain Masala Dosa</li>
+              <li>Roasted Masala Dosa</li>
+              <li>Ghee Rava Dosa</li>
+              <li>Ghee Roasted Dosa</li>
+              <li>Mushroom Roasted Dosa</li>
+              <li>Paper Roast</li>
+              <li>Onion Rava Dosa</li>
+              <li>Onion Roasted Dosa</li>
+              <li>Ghee Roasted Masala Dosa</li>
+              <li>Ghee Onion Dosa</li>
+              <li>Butter Masal Dosai</li>
+              <li>Butter Masal Dosai</li>
+              <li>Upma</li>
+              <li>Wheat Upma</li>
+              <li>Wheat Dosa</li>
+              <li>Wheat Parota</li>
+              <li>Kesari</li>
+              <li>Curd Vadai</li>
+              <li>Kal Dosa -2</li>
+              <li>Mini Tiffin</li>
+              <li>Thattu Idly</li>
+              <li>Thattu Podi Idly</li>
+              <li>Tomato Roast</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soups + Annapoorna Special -->
+      <div class="menu-card mb-5" data-animate>
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="section-title"><span>🥣</span> SOUPS</h3>
+            <ul class="menu-list">
+              <li>Tomato Soup</li>
+              <li>Vegetable Soup</li>
+              <li>Sweet Corn Soup</li>
+              <li>Veg. Clear Soup</li>
+              <li>Mushroom Soup</li>
+              <li>Garlic Soup</li>
+              <li>Hot & Sour Pepper Soup</li>
+              <li>Dragon Soup</li>
+              <li>Milangu Thani Soup</li>
+              <li>Sizzling Soup</li>
+              <li>French Onion Soup</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3 class="section-title">
+              <span>🥦</span> ANNAPOORNA SPECIAL
+            </h3>
+            <ul class="menu-list">
+              <li>Idli Fry</li>
+              <li>Idiyappam (Evening Only)</li>
+              <li>Aappam (Evening Only)</li>
+              <li>Kaima Paratha</li>
+              <li>Chilly Paratha</li>
+              <li>Potato Fry</li>
+              <li>Mushroom Chilly Paratha</li>
+              <li>Idli Manchurian</li>
+              <li>Pepper Idli</li>
+              <li>Paneer Pepper Fry</li>
+              <li>Mushroom Pepper Fry</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indian Rice Bowl + Starters Indian -->
+      <div class="menu-card mb-5" data-animate>
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="section-title">
+              <span>🍛</span> INDIAN RICE BOWL
+            </h3>
+            <ul class="menu-list">
+              <li>Vegetable Briyani</li>
+              <li>Mushroom Briyani</li>
+              <li>Vegetable Pulav</li>
+              <li>Green Peas Pulav</li>
+              <li>Ghee Rice</li>
+              <li>Kashmir Pulav</li>
+              <li>Meals</li>
+              <li>Mini Meals</li>
+              <li>Sambar Sadham</li>
+              <li>Curd Rice</li>
+              <li>Tomato Rice</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3 class="section-title">
+              <span>🥗</span> STARTERS INDIAN
+            </h3>
+            <ul class="menu-list">
+              <li>Roasted Papad</li>
+              <li>Masala Papad</li>
+              <li>French Fry</li>
+              <li>Gobi 65</li>
+              <li>Baby Corn 65</li>
+              <li>Mushroom 65</li>
+              <li>Paneer 65</li>
+              <li>Vegetable Spring Roll</li>
+              <li>Vegetable Lollipop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hot & Cold Beverages -->
+      <div class="menu-card mb-5" data-animate>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <h3 class="section-title">
+              <span>☕</span> HOT & COLD BEVERAGES
+            </h3>
+            <ul class="menu-list">
+              <li>Coffee</li>
+              <li>Tea</li>
+              <li>Milk</li>
+              <li>Boost</li>
+              <li>Horlicks</li>
+              <li>Sukku Coffee</li>
+              <li>Badam Milk</li>
+              <li>Kalkandu Milk</li>
+              <li>Bournvita</li>
+              <li>Rose Milk - Cold</li>
+              <li>Badam Gheer - Cold</li>
+              <li>Sukku Milk</li>
+              <li>Cotton Candy Milk</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indian Gravies + Chinese Rice & Noodles + Tandoori -->
+      <div class="menu-card mb-5" data-animate>
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="section-title">
+              <span>🥣</span> INDIAN GRAVIES
+            </h3>
+            <ul class="menu-list">
+              <li>Green Peas Masala</li>
+              <li>Dhall Fry</li>
+              <li>Chana Masala</li>
+              <li>Gobi Masala</li>
+              <li>Mutter Paneer</li>
+              <li>Aloo Gobi Masala</li>
+              <li>Paneer Butter Masala</li>
+              <li>Mix Veg Curry</li>
+              <li>Malai Koftah</li>
+              <li>Mushroom Masala</li>
+              <li>Chettinad Gobi Masala</li>
+              <li>Chettinad Paneer Masala</li>
+              <li>Chettinad Mushroom Masala</li>
+              <li>Kadai Gobi Masala</li>
+              <li>Kadai Mushroom Masala</li>
+              <li>Kadai Paneer Masala</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="section-title">
+              <span>🍚</span> CHINESE RICE & NOODLES
+            </h3>
+            <ul class="menu-list">
+              <li>Veg. Fried Rice</li>
+              <li>Schezwan Fried Rice</li>
+              <li>Mushroom Fried Rice</li>
+              <li>Paneer Fried Rice</li>
+              <li>Veg Noodles</li>
+              <li>Schezwan Noodles</li>
+              <li>Mushroom Noodles</li>
+              <li>Paneer Noodles</li>
+              <li>American Chopsuey</li>
+              <li>Chinese Chopsuey</li>
+              <li>Gobi Manchurian</li>
+              <li>Veg Manchurian</li>
+              <li>Mushroom Manchurian</li>
+              <li>Paneer Manchurian</li>
+              <li>Baby Corn Manchurian</li>
+              <li>Chilly Gobi</li>
+              <li>Chilly Mushroom</li>
+              <li>Chilly Paneer</li>
+              <li>Chilly Baby Corn</li>
+              <li>Dragon Gobi</li>
+              <li>Dragon Mushroom</li>
+              <li>Dragon Paneer</li>
+              <li>Dragon Baby Corn</li>
+              <li>Gobi Fried Rice</li>
+              <li>Babycorn Fried Rice</li>
+              <li>Mixed Veg Fried Rice</li>
+              <li>Chettinad Fried Rice</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="section-title">
+              <span>🍢</span> TANDOORI
+            </h3>
+            <ul class="menu-list">
+              <li>Roti</li>
+              <li>Butter Roti</li>
+              <li>Rumali</li>
+              <li>Garlic Naan</li>
+              <li>Cheese Naan</li>
+              <li>Stuffed Naan</li>
+              <li>Tandoori Paratha</li>
+              <li>Paneer Paratha</li>
+              <li>Kulcha</li>
+              <li>Butter Kulcha</li>
+              <li>Stuffed Kulcha</li>
+              <li>Onion Kulcha</li>
+              <li>Butter Naan</li>
+              <li>Butter Roti</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Please Note Section -->
+      <div class="alert alert-success" role="alert">
+        <strong>Please Note:</strong> Please allow us 10 minutes to serve you hot.
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="mb-5">
+      <h2>About Sri Annapoorna</h2>
+      <p>
+        Established in 1970, Hotel Sri Annapoorna has been serving delicious vegetarian cuisine for more than 55 years. Our commitment to fresh, healthy, and tasty food has made us a favorite in Salem. We cherish the legacy of providing authentic South Indian and Chinese dishes in a warm and welcoming atmosphere.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="mb-5">
+      <h2>Contact Us</h2>
+      <p>Phone: +91 9876543210</p>
+      <p>Email: info@sriannapoorna.com</p>
+      <p>Follow us on social media for updates!</p>
+    </section>
+
+    <!-- Address Section -->
+    <section id="address-section" class="mb-5">
+      <h2>Our Address</h2>
+      <p>@ Fairlands & Ramakrishna Road, Salem</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Hotel Sri Annapoorna | All Rights Reserved
+  </footer>
+
+  <!-- Bootstrap JS & Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Smooth Scroll Animation for nav links -->
+  <script>
+    document.querySelectorAll("nav .nav-link").forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 70,
+            behavior: "smooth",
+          });
+        }
+
+        // Update active class on nav links
+        document
+          .querySelectorAll("nav .nav-link")
+          .forEach((el) => el.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+
+    // Animate menu cards on scroll
+    const menuCards = document.querySelectorAll("[data-animate]");
+
+    function checkCards() {
+      const triggerBottom = window.innerHeight * 0.9;
+
+      menuCards.forEach((card) => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < triggerBottom) {
+          card.style.animation = "fadeInUp 0.8s ease forwards";
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkCards);
+    window.addEventListener("load", checkCards);
+  </script>
+</body>
+</html>
